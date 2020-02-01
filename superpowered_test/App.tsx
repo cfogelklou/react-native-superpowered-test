@@ -25,6 +25,8 @@ import {
 
 import * as Superpowered from 'react-native-superpowered';
 
+declare var global: {HermesInternal: null | {}};
+
 const App = () => {
   return (
     <Fragment>
@@ -39,18 +41,24 @@ const App = () => {
             </View>
           )}
           <View style={styles.body}>
-            <TouchableOpacity style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
+            <TouchableOpacity style={styles.sectionContainer}
+              onPress={()=>{
+                let a = Superpowered.Recorder.inst();                                
+              }}
+              >
+              <Text style={styles.sectionTitle}>Init Recorder</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
+            <TouchableOpacity style={styles.sectionContainer}
+              onPress={()=>{
+                Superpowered.Recorder.inst().start(48000, 10, 2, false);
+              }} >
+              <Text style={styles.sectionTitle}>Start Recording 10s</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.sectionContainer}
+              onPress={()=>{
+                Superpowered.Recorder.inst().stop();
+              }} >
+              <Text style={styles.sectionTitle}>Stop Recording</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
