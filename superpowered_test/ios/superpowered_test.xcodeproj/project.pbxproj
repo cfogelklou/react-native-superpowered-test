@@ -12,6 +12,7 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1560420723E5774D0001B096 /* libRNSuperpowered.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 156041F423E571960001B096 /* libRNSuperpowered.a */; };
 		1A858B54E8FDE93D3117A28A /* libPods-superpowered_test-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED4B9CD2EA1B2C53E33A5F7 /* libPods-superpowered_test-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -19,7 +20,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* superpowered_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* superpowered_testTests.m */; };
 		55D06BC21BDBF41C1B51A1E5 /* libPods-superpowered_testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D9A7246C1421128848DFA /* libPods-superpowered_testTests.a */; };
 		6D7CFB42F664C3897D038B86 /* libPods-superpowered_test-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA4511A8E8BCC8D2586D447 /* libPods-superpowered_test-tvOSTests.a */; };
-		A03F45225B20960F8A30F2B9 /* libPods-superpowered_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C55AB3F3D9A50BE777A26AFC /* libPods-superpowered_test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03F45225B20960F8A30F2B9 /* libPods-superpowered_test.a in Frameworks */,
+				1560420723E5774D0001B096 /* libRNSuperpowered.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
