@@ -66,6 +66,12 @@ const App = () => {
               }} >
               <Text style={styles.sectionTitle}>jsonCommand</Text>
             </TouchableOpacity>            
+            <TouchableOpacity style={styles.sectionContainer}
+              onPress={()=>{
+                Superpowered.Api.StartPlayback("https://cdn.twit.tv/audio/kh/kh0413/kh0413.mp3");
+              }} >
+              <Text style={styles.sectionTitle}>mp3</Text>
+            </TouchableOpacity>               
           </View>
         </ScrollView>
       </SafeAreaView>
