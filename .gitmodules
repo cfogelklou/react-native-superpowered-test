@@ -1,3 +1,3 @@
 [submodule "npm_module"]
-	path = npm_module
+	path = superpowered_test/node_modules/react-native-superpowered
 	url = https://github.com/cfogelklou/react-native-superpowered
