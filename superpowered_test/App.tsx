@@ -60,6 +60,12 @@ const App = () => {
               }} >
               <Text style={styles.sectionTitle}>Stop Recording</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.sectionContainer}
+              onPress={()=>{
+                Superpowered.Api.GenerateTone(1000, 0.5);
+              }} >
+              <Text style={styles.sectionTitle}>jsonCommand</Text>
+            </TouchableOpacity>            
           </View>
         </ScrollView>
       </SafeAreaView>

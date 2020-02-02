@@ -28,34 +28,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "superpowered_test.app"
-               BlueprintName = "superpowered_test"
-               ReferencedContainer = "container:superpowered_test.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "superpowered_testTests.xctest"
-               BlueprintName = "superpowered_testTests"
-               ReferencedContainer = "container:superpowered_test.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "709F6F3E7BD5851868B08B340592D4C2"
                BuildableName = "RNSuperpowered"
                BlueprintName = "RNSuperpowered"
@@ -74,6 +46,34 @@
                BuildableName = "libRNSuperpowered.a"
                BlueprintName = "RNSuperpowered"
                ReferencedContainer = "container:../node_modules/react-native-superpowered/ios/RNSuperpowered.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+               BuildableName = "superpowered_test.app"
+               BlueprintName = "superpowered_test"
+               ReferencedContainer = "container:superpowered_test.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
+               BuildableName = "superpowered_testTests.xctest"
+               BlueprintName = "superpowered_testTests"
+               ReferencedContainer = "container:superpowered_test.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
