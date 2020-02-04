@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.8.6",
     "react-native": "0.60.5",
-    "react-native-superpowered": "file:./../npm_module"
+    "react-native-superpowered": "git+https://git@github.com/cfogelklou/react-native-superpowered.git"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
