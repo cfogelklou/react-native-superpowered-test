@@ -12,6 +12,7 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		156BF3BB23EAD4BF0016D021 /* libRNSuperpowered.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 156BF3BA23EAD47B0016D021 /* libRNSuperpowered.a */; };
 		164BE0B6F4DA2EF946380A8F /* libPods-superpowered_test-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5393E6327FD4F5469718D /* libPods-superpowered_test-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -29,6 +30,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = superpowered_test;
+		};
+		156BF3B923EAD47B0016D021 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 156BF3B523EAD47A0016D021 /* RNSuperpowered.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNSuperpowered;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +60,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = superpowered_test/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = superpowered_test/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = superpowered_test/main.m; sourceTree = "<group>"; };
+		156BF3B523EAD47A0016D021 /* RNSuperpowered.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSuperpowered.xcodeproj; path = "../node_modules/react-native-superpowered/ios/RNSuperpowered.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* superpowered_test-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "superpowered_test-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* superpowered_test-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "superpowered_test-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC3709DD5D9DDD8AA9830A6 /* Pods-superpowered_test-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-superpowered_test-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-superpowered_test-tvOSTests/Pods-superpowered_test-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9959E9B206D36C2AD51804 /* libPods-superpowered_test.a in Frameworks */,
+				156BF3BB23EAD4BF0016D021 /* libRNSuperpowered.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +146,14 @@
 			name = superpowered_test;
 			sourceTree = "<group>";
 		};
+		156BF3B623EAD47A0016D021 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				156BF3BA23EAD47B0016D021 /* libRNSuperpowered.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +170,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				156BF3B523EAD47A0016D021 /* RNSuperpowered.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -194,7 +213,6 @@
 				EE64D48EB356801DA0BFF4C7 /* Pods-superpowered_testTests.debug.xcconfig */,
 				F12F3E292C049DE722BA23F9 /* Pods-superpowered_testTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,12 +326,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 156BF3B623EAD47A0016D021 /* Products */;
+					ProjectRef = 156BF3B523EAD47A0016D021 /* RNSuperpowered.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* superpowered_test */,
@@ -323,6 +348,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		156BF3BA23EAD47B0016D021 /* libRNSuperpowered.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSuperpowered.a;
+			remoteRef = 156BF3B923EAD47B0016D021 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
