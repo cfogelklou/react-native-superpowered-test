@@ -7,8 +7,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-native": "0.60.5",
+    "react": "16.9.0",
+    "react-native": "0.61.0",
     "react-native-superpowered": "git+https://git@github.com/cfogelklou/react-native-superpowered.git"
   },
   "devDependencies": {
@@ -17,7 +17,7 @@
     "@react-native-community/eslint-config": "^0.0.3",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
-    "@types/react-native": "^0.60.14",
+    "@types/react-native": "^0.61.0",
     "@types/react-test-renderer": "^16.9.0",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
