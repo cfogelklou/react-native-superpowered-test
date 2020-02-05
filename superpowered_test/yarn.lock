@@ -4717,8 +4717,9 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
-"react-native-superpowered@file:../npm_module":
+"react-native-superpowered@git+https://git@github.com/cfogelklou/react-native-superpowered.git":
   version "1.0.7"
+  resolved "git+https://git@github.com/cfogelklou/react-native-superpowered.git#3fcafe5d29042b405d30eb996912145d7d12ca58"
 
 react-native@0.60.5:
   version "0.60.5"

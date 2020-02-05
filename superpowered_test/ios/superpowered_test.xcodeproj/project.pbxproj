@@ -18,6 +18,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* superpowered_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* superpowered_testTests.m */; };
+		4C6F34EFB6195C42E10E7728 /* libPods-superpowered_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C55AB3F3D9A50BE777A26AFC /* libPods-superpowered_test.a */; };
 		55D06BC21BDBF41C1B51A1E5 /* libPods-superpowered_testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D9A7246C1421128848DFA /* libPods-superpowered_testTests.a */; };
 		6D7CFB42F664C3897D038B86 /* libPods-superpowered_test-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA4511A8E8BCC8D2586D447 /* libPods-superpowered_test-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1560420723E5774D0001B096 /* libRNSuperpowered.a in Frameworks */,
+				4C6F34EFB6195C42E10E7728 /* libPods-superpowered_test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
