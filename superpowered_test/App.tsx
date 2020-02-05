@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -16,18 +17,51 @@ import {
   View,
   Text,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  Platform,
 } from 'react-native';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import * as Superpowered from 'react-native-superpowered';
+import * as RNFS from 'react-native-fs';
 
 const track = require('./resources/track.mp3');
 
 declare var global: {HermesInternal: null | {}};
+
+/*
+console.log(RNFS.MainBundlePath);
+console.log(RNFS.DocumentDirectoryPath);
+
+let bundle:any=(Platform.OS === 'ios')?RNFS.MainBundlePath:RNFS.DocumentDirectoryPath;
+let bundlePath:string = bundle.toString();
+
+RNFS.readDir(bundle) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
+  .then((result) => {
+    console.log('GOT RESULT', result);
+
+    // stat the first file
+    return Promise.all([RNFS.stat(result[0].path), result[0].path]);
+  })
+  .then((statResult) => {
+    if (statResult[0].isFile()) {
+      // if we have a file, read it
+      console.log(statResult[1].toString());
+      return RNFS.readFile(statResult[1], 'utf8');
+      //return statResult[1].toString();
+    }
+
+    return 'no file';
+  })
+  .then((contents) => {
+    // log the file contents
+    //console.log(contents);
+  })
+  .catch((err) => {
+    console.log(err.message, err.code);
+  });
+  */
 
 const App = () => {
   return (
@@ -43,37 +77,20 @@ const App = () => {
             </View>
           )}
           <View style={styles.body}>
-            <TouchableOpacity style={styles.sectionContainer}
-              onPress={()=>{
-                let a = Superpowered.Recorder.inst();                                
-              }}
-              >
-              <Text style={styles.sectionTitle}>Init Recorder</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.sectionContainer}
-              onPress={()=>{
-                Superpowered.Recorder.inst().start(48000, 10, 2, false);
-              }} >
-              <Text style={styles.sectionTitle}>Start Recording 10s</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.sectionContainer}
-              onPress={()=>{
-                Superpowered.Recorder.inst().stop();
-              }} >
-              <Text style={styles.sectionTitle}>Stop Recording</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.sectionContainer}
-              onPress={()=>{
+            <TouchableOpacity
+              style={styles.sectionContainer}
+              onPress={() => {
                 Superpowered.Api.GenerateTone(1000, 0.5);
-              }} >
-              <Text style={styles.sectionTitle}>jsonCommand</Text>
-            </TouchableOpacity>            
-            <TouchableOpacity style={styles.sectionContainer}
-              onPress={()=>{
-                Superpowered.Api.StartPlayback(track);
-              }} >
+              }}>
+              <Text style={styles.sectionTitle}>Generate Tone</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.sectionContainer}
+              onPress={() => {
+                Superpowered.Api.StartPlayback('/sdcard/Download/shambhala2017.mp3');
+              }}>
               <Text style={styles.sectionTitle}>mp3</Text>
-            </TouchableOpacity>               
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </SafeAreaView>
