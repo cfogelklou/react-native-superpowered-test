@@ -25,6 +25,8 @@ import {
 
 import * as Superpowered from 'react-native-superpowered';
 
+const track = require('./resources/track.mp3');
+
 declare var global: {HermesInternal: null | {}};
 
 const App = () => {
@@ -68,7 +70,7 @@ const App = () => {
             </TouchableOpacity>            
             <TouchableOpacity style={styles.sectionContainer}
               onPress={()=>{
-                Superpowered.Api.StartPlayback("https://cdn.twit.tv/audio/kh/kh0413/kh0413.mp3");
+                Superpowered.Api.StartPlayback(track);
               }} >
               <Text style={styles.sectionTitle}>mp3</Text>
             </TouchableOpacity>               
