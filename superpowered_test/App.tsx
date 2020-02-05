@@ -26,8 +26,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import * as Superpowered from 'react-native-superpowered';
 import * as RNFS from 'react-native-fs';
 
-const track = require('./resources/track.mp3');
-
+let reverse:boolean = false;
 declare var global: {HermesInternal: null | {}};
 
 /*
@@ -63,6 +62,8 @@ RNFS.readDir(bundle) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundle
   });
   */
 
+let speed:number = 1.0;
+
 const App = () => {
   return (
     <>
@@ -80,17 +81,35 @@ const App = () => {
             <TouchableOpacity
               style={styles.sectionContainer}
               onPress={() => {
-                Superpowered.Api.GenerateTone(1000, 0.5);
+                Superpowered.Api.StartPlayback('/sdcard/Download/shambhala2017.mp3');
               }}>
-              <Text style={styles.sectionTitle}>Generate Tone</Text>
+              <Text style={styles.sectionTitle}>shambhala2017</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.sectionContainer}
               onPress={() => {
-                Superpowered.Api.StartPlayback('/sdcard/Download/shambhala2017.mp3');
+                reverse = (reverse) ? false : true;
+                Superpowered.Api.SetDirection(reverse);
               }}>
-              <Text style={styles.sectionTitle}>mp3</Text>
+              <Text style={styles.sectionTitle}>Reverse It</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.sectionContainer}
+              onPress={() => {
+                speed = speed + 0.2;
+                Superpowered.Api.SetSpeed(speed);
+              }}>
+              <Text style={styles.sectionTitle}>Speed Up</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.sectionContainer}
+              onPress={() => {
+                speed = speed - 0.2;
+                Superpowered.Api.SetSpeed(speed);
+              }}>
+              <Text style={styles.sectionTitle}>Slow Down</Text>
+            </TouchableOpacity>
+                        
           </View>
         </ScrollView>
       </SafeAreaView>
