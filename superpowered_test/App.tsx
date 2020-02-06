@@ -54,6 +54,13 @@ const App = () => {
             <TouchableOpacity
               style={styles.sectionContainer}
               onPress={() => {
+                Superpowered.Api.StartPlayback('http://cbc.mc.tritondigital.com/CBC_IDEAS_P/media/ideas-DvH3TbU6-20200205.mp3');
+              }}>
+              <Text style={styles.sectionTitle}>cbc</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.sectionContainer}
+              onPress={() => {
                 reverse = (reverse) ? false : true;
                 Superpowered.Api.SetDirection(reverse);
               }}>
