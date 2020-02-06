@@ -24,43 +24,9 @@ import {
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import * as Superpowered from 'react-native-superpowered';
-import * as RNFS from 'react-native-fs';
 
 let reverse:boolean = false;
 declare var global: {HermesInternal: null | {}};
-
-/*
-console.log(RNFS.MainBundlePath);
-console.log(RNFS.DocumentDirectoryPath);
-
-let bundle:any=(Platform.OS === 'ios')?RNFS.MainBundlePath:RNFS.DocumentDirectoryPath;
-let bundlePath:string = bundle.toString();
-
-RNFS.readDir(bundle) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
-  .then((result) => {
-    console.log('GOT RESULT', result);
-
-    // stat the first file
-    return Promise.all([RNFS.stat(result[0].path), result[0].path]);
-  })
-  .then((statResult) => {
-    if (statResult[0].isFile()) {
-      // if we have a file, read it
-      console.log(statResult[1].toString());
-      return RNFS.readFile(statResult[1], 'utf8');
-      //return statResult[1].toString();
-    }
-
-    return 'no file';
-  })
-  .then((contents) => {
-    // log the file contents
-    //console.log(contents);
-  })
-  .catch((err) => {
-    console.log(err.message, err.code);
-  });
-  */
 
 let speed:number = 1.0;
 
