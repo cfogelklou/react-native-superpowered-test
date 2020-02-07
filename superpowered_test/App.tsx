@@ -25,10 +25,26 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import * as Superpowered from 'react-native-superpowered';
 
-let reverse:boolean = false;
+
 declare var global: {HermesInternal: null | {}};
 
-let speed:number = 1.0;
+class SpSingleton {
+  private static instance: SpSingleton;
+  public speed:number = 1.0;
+  public reverse:boolean = false;
+
+  private constructor() { 
+    Superpowered.InitializeSuperpowered('',false, false, true, false, true, false, true );
+
+  }
+  public static inst(): SpSingleton {
+      if (!SpSingleton.instance) {
+        SpSingleton.instance = new SpSingleton();
+      }
+
+      return SpSingleton.instance;
+  }
+};
 
 const App = () => {
   return (
@@ -47,38 +63,38 @@ const App = () => {
             <TouchableOpacity
               style={styles.sectionContainer}
               onPress={() => {
-                Superpowered.Api.StartPlayback('/sdcard/Download/shambhala2017.mp3');
+                Superpowered.StartPlayback('http://cbc.mc.tritondigital.com/CBC_IDEAS_P/media/ideas-DvH3TbU6-20200205.mp3');
               }}>
-              <Text style={styles.sectionTitle}>shambhala2017</Text>
+              <Text style={styles.sectionTitle}>Start Playing</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.sectionContainer}
               onPress={() => {
-                Superpowered.Api.StartPlayback('http://cbc.mc.tritondigital.com/CBC_IDEAS_P/media/ideas-DvH3TbU6-20200205.mp3');
+                Superpowered.StopPlayback();
               }}>
-              <Text style={styles.sectionTitle}>cbc</Text>
-            </TouchableOpacity>
+              <Text style={styles.sectionTitle}>Stop Playing</Text>
+            </TouchableOpacity>            
             <TouchableOpacity
               style={styles.sectionContainer}
               onPress={() => {
-                reverse = (reverse) ? false : true;
-                Superpowered.Api.SetDirection(reverse);
+                SpSingleton.inst().reverse = (SpSingleton.inst().reverse) ? false : true;
+                Superpowered.SetDirection(SpSingleton.inst().reverse);
               }}>
               <Text style={styles.sectionTitle}>Reverse It</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.sectionContainer}
               onPress={() => {
-                speed = speed + 0.2;
-                Superpowered.Api.SetSpeed(speed);
+                SpSingleton.inst().speed = SpSingleton.inst().speed + 0.2;
+                Superpowered.SetSpeed(SpSingleton.inst().speed);
               }}>
               <Text style={styles.sectionTitle}>Speed Up</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.sectionContainer}
               onPress={() => {
-                speed = speed - 0.2;
-                Superpowered.Api.SetSpeed(speed);
+                SpSingleton.inst().speed = SpSingleton.inst().speed - 0.2;
+                Superpowered.SetSpeed(SpSingleton.inst().speed);
               }}>
               <Text style={styles.sectionTitle}>Slow Down</Text>
             </TouchableOpacity>
